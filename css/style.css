@@ -42,6 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--Dark-Blue);
+  border-radius: 20px;
 }
 
 .card img {
@@ -73,15 +74,17 @@ body {
   display: inline-block;
   padding: 20px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .opt:hover {
   background-color: var(--Medium-Grey);
+  transition: 1s;
  
 }
 
 
-.opt:active {
+.opt:focus, .opt:active {
   background-color: var(--Orange);
   transition: 0.1s;
 }
@@ -111,9 +114,17 @@ body {
 }
 
 /* MOBILE */
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
   .card {
     width: 360px;
+    padding: 30px;
+
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .card {
+    width: 400px;
     padding: 30px;
   }
 }
